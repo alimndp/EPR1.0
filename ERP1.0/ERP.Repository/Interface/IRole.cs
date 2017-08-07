@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace ERP.Repository.Interface
 {
-    interface IRole
+   public interface IRole
     {
-        bool CreateRole(string Name, string Gender, string Address, string Email, string Password);
-        bool UpadateRole(int ID);
-        bool DeleteRole(int ID);
-        IEnumerable<User> GetAllRoles();
-        User GetRoleByUserID(int ID);
+        bool CreateRole(ModuleMenuMapping mapping);
+        bool UpadateRole(ModuleMenuMapping mapping);
+        bool DeleteRole(ModuleMenuMapping mapping);
+        IEnumerable<ModuleMenuMapping> GetAllRoles();
+        object GetRoleByUserID(int ID);
         void Save();
     }
 }

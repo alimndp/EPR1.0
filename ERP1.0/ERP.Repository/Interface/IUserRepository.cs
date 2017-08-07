@@ -7,13 +7,14 @@ using ERP.DataAccess;
 
 namespace ERP.Repository.Interface
 {
-    interface IUserRepository
+   public interface IUserRepository
     {
-        bool CreateUser(string Name,string Gender,string Address, string Email,string Password);
-        bool UpadateUser(int ID);
-        bool DeleteUser(int ID);
+        bool CreateUser(User user);
+        bool UpadateUser(User user);
+        bool DeleteUser(User user);
         IEnumerable<User> GetAllUsers();
         User GetUserByID(int ID);
+        User Login(string UserName, string password);
         void Save();
     }
 }
